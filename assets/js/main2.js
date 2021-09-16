@@ -18,13 +18,14 @@ const app = Vue.createApp({
       */
       correctAnswer: {
         stage1: {
-          q1: 'friend',
+          q1: 'aaa',
         },
         stage2: {
-          q1: 'avoid',
+          q1: 'aaa',
           // q2: 'えええ',
           // q3: 'おおお'
         },
+      },
 
       /* それぞれの問題が正解かどうか
       *  ex. 問題2-3を追加する場合は配列にfalseを追加します。
@@ -38,6 +39,8 @@ const app = Vue.createApp({
           // false, // 2-2
           // false, // 2-3
         ],
+      },
+
       /* ステージの問題が全て正解かどうか */
       clear: {
         stage1: false,
@@ -64,7 +67,7 @@ const app = Vue.createApp({
       this.clear[stage] = result;
       /* 最終ステージの入力を判定します。 */
       if ( this.clear[stage] === true && final === 'final' ) {
-        window.location.href = 'final.html';
+        window.location.href = 'final2.html';
       }
     },
     /* クリア画面「次のステージへ」ボタンをクリックした時の動作を設定します
